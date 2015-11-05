@@ -6,6 +6,7 @@ package nyc.c4q.m47bell;
  * Access Code 2-1
  * Marbella Vidals
  */
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -147,17 +148,29 @@ public class Tree {
     }
 
 
-    private int insert(Node node){
+    private void insert(int data) {
 
-      if (node == null){
-          return asInt(node.symbol);
-      }
+        if (root == null) {
+            this.root = new Node(root.symbol);
+        } else {
+            this.root = insert(this.root, data);
+        }
+
+    }
+
+    //todo: insert function, try recursion
+    private Node insert(Node node, int data) {
         //compare node == 0 then return node
-        //compare node if < 0, insert node.left
-
-        //else insert node.right
-
-        return 0;
+        if (node == null) {
+            return new Node(node.symbol);
+            //else insert node.right
+        } else if (asInt(node.symbol) < data) {
+            node.right = insert(node.right, data);
+        } else {
+            //compare node if < 0, insert node.left
+            node.left = insert(node.left, data);
+        }
+        return node;
     }
 }
 

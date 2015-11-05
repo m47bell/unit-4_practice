@@ -1,0 +1,14 @@
+module.exports = function(app) {
+
+  var api = app.express.Router();
+
+  api.get('/', function(req, res, next){
+   
+    var data = {success: 1};
+    res.json(data);
+  
+  });
+
+
+  return api; 
+};
