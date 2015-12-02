@@ -12,25 +12,19 @@ public class TreeHW {
     public static void main(String[] args) {
         // This section deals with forming an expression tree from an expression
 
-
         String expression = "a b + c d e + * *";
         System.out.println("expression: " + expression);
 
-
         Tree expressionTree = formExpressionTree(expression);
-
 
         System.out.print("postfix: ");
         expressionTree.printPostfix();
 
-
         System.out.print("prefix: ");
         expressionTree.printPrefix();
 
-
         System.out.print("infix: ");
         expressionTree.printInfix();
-
 
         System.out.print("breadth: ");
         expressionTree.printBreadth();
@@ -43,10 +37,17 @@ public class TreeHW {
         System.out.println("does exist?: " + BST.exists(7));
         System.out.println("min?: " + BST.findMin());
         System.out.println("max?: " + BST.findMax());
-//    BST.insert(1);
-//    BST.insert(13);
-//    System.out.println("min?: " + BST.findMin()); // should be 1 after insert(1)
-//    System.out.println("max?: " + BST.findMax()); // should be 13 after insert(13)
+        BST.insert(1);
+        BST.insert(13);
+        System.out.println("min?: " + BST.findMin()); // should be 1 after insert(1)
+        System.out.println("max?: " + BST.findMax()); // should be 13 after insert(13)
+
+        isBST();
+    }
+
+    private static boolean isBST() {
+
+        return true;
     }
 
 
@@ -100,7 +101,6 @@ public class TreeHW {
 
 
         Node rootNode = stack.pop();
-
 
         Tree tree = new Tree();
         tree.root = rootNode;

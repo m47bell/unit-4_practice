@@ -32,8 +32,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        printRecursively(1);
-        printTailRecursively(1);
-        printHeadRecursively(1);
+//        printRecursively(1);
+//        printTailRecursively(1);
+//        printHeadRecursively(1);
     }
 }

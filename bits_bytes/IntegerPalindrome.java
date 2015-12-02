@@ -19,19 +19,30 @@ class IntegerPalindrome {
 	return true;
 	}
 
-	public static String toBinary( int input){
+// Queue with two stacks. Show how to implement a queue using two stacks. Hint: If you push elements onto a stack and then pop them all, they appear in reverse order. If you repeat this process, they're now back in order.
+
+	private static boolean isPalindrome2(String s){
+		if(s.isEmpty()){
+			return true;
+		}
+		Stack <Character> stack = new Stack();
+		int left = 0;
+		int right = s.length()-1;
+
+		while(left < right){
+			if(s.charAt(left) != s.charAt(right)){
+			stack.pop(s.charAt(left))
+			}
+
+
+		}
+
+
 
 
 
 
 	}
-
-
-
-
-// Queue with two stacks. Show how to implement a queue using two stacks. Hint: If you push elements onto a stack and then pop them all, they appear in reverse order. If you repeat this process, they're now back in order.
-
-
 
 
 

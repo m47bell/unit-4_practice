@@ -148,27 +148,23 @@ public class Tree {
     }
 
 
-    private void insert(int data) {
-
-        if (root == null) {
-            this.root = new Node(root.symbol);
-        } else {
-            this.root = insert(this.root, data);
-        }
-
+    public void insert(int data) {
+        this.root = insert(this.root, data);
     }
 
     //todo: insert function, try recursion
-    private Node insert(Node node, int data) {
+    public static Node insert(Node node, int data) {
         //compare node == 0 then return node
         if (node == null) {
-            return new Node(node.symbol);
+            return new Node(String.valueOf(data));
             //else insert node.right
-        } else if (asInt(node.symbol) < data) {
-            node.right = insert(node.right, data);
         } else {
-            //compare node if < 0, insert node.left
-            node.left = insert(node.left, data);
+            if (data <= asInt(node.symbol)) {
+                node.left = insert(node.left, data);
+            } else {
+                //compare node if < 0, insert node.left
+                node.right = insert(node.right, data);
+            }
         }
         return node;
     }
