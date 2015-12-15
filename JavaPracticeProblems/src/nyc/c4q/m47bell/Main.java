@@ -24,6 +24,17 @@ public class Main {
         }
     }
 
+    public static int sort(int x, int y) {
+
+        if (x > y) {
+            int temp = x;
+            x = y;
+            y = temp;
+        }
+
+        return y;
+    }
+
     public static void main(String[] args) {
         // write your code here
         int[] a = {3, 7, 4, 5};
@@ -32,11 +43,16 @@ public class Main {
 //            System.out.print(i + "");
 //            System.out.println();
 //        }
-        reverseArray2(a);
+//        reverseArray2(a);
 
-        for (int i : a) {
-            System.out.print(i + "");
-            System.out.println();
-        }
+        int x = 7;
+        int y = 3;
+        sort(x, y);
+
+
+//        for (int i : a) {
+//            System.out.print(i + "");
+//            System.out.println();
+//        }
     }
 }
